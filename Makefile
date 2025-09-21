@@ -1,5 +1,6 @@
 MODULE := hid-shanwan
-KDIR := /lib/modules/$(shell uname -r)/build
+kernelver := $(uname -r)
+KDIR := /lib/modules/${kernelver}/build
 PWD := $(shell pwd)
 
 obj-m := $(MODULE).o
